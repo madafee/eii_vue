@@ -1,0 +1,241 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background: #edf0f5;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+div:focus{
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+.btn{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .clearfix{
+    zoom:1;
+  }
+}
+
+//main-container全局样式
+.app-main{
+  min-height: 100%
+}
+
+.app-container {
+  padding: 10px;
+}
+.app-container-box{
+  background-color: white;
+  padding: 10px;
+}
+#app .sidebar-container a .is-active{
+  border-left: 2px solid #409EFF;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td,.el-table__body tr.current-row > td{
+  background-color: #f9efd8;
+}
+.el-table--enable-row-hover .el-table__body tr:hover > td{
+  background-color: #f9efd8;
+}
+.el-table thead,.el-table th{
+  background-color: #ebf5ff;
+}
+.el-table__body tr.hover-row > td{
+  background-color: #f9efd8;
+}
+.el-table__body tr.hover-row.el-table__row--striped > td, .el-table__body tr.hover-row > td{
+  background-color: #f9efd8;
+}
+#app .sidebar-container a .is-active{
+  border-left: 2px solid #409EFF;
+}
+.hidescanning{
+  position: absolute;
+  z-index: -10;
+  left: 0;
+  top: 0;
+}
+.userdetailed .el-form-item{
+  border-bottom: 1px dotted #dcdfe6;
+  margin-bottom: 0;
+  margin-top: 10px;
+  min-height: 50px;
+}
+.userdetailed .el-form-item__label{
+  text-align: left;
+}
+.newsdialog-footer{
+  text-align: right;
+  padding-top: 20px;
+}
+.tabletitle{
+  background: #409EFF;
+  color: #fff;
+  padding: 15px 10px;
+}
+.el-table th>.cell{
+  text-align: center;
+}
+.el-form-item__label{
+  padding: 0 1px 0 0;
+}
+.floatright{
+  float: right;
+}
+.el-card__body{
+  padding:10px;
+}
+.imitate{
+  color: #409EFF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+i.el-icon-tickets, i.el-icon-edit, i.el-icon-circle-check-outline, i.el-icon-circle-close-outline, i.el-icon-share, i.el-icon-circle-plus-outline{
+  font-size: 17px;
+}
+.search{
+  height: 85px;
+  overflow: hidden;
+}
+
+//zhou
+.el-dialog__header{
+  border-bottom:1px solid #e6ecf5;
+}
+.el-dialog__footer{
+  background: #eef2f6;
+  padding: 10px 0 15px;
+  text-align:center;
+}
+.el-dialog__body{
+  border-bottom: 1px solid #e6ecf5;
+  padding: 0;
+}
+.dialog-footer-other{
+  background: #eef2f6;
+  padding: 20px 15px 25px;
+  text-align:center;
+}
+.add-padding{// 公告 去上边
+  padding: 20px;
+  padding-top: 0;
+}
+.detailedpadding{
+  padding: 20px 30px 40px;
+}
+.inputsearch{
+  margin: 0;
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+.bg{
+  background-color: #ffffff;
+}
+.wid120{
+  width: 120px;
+}
+.sticky-left{
+  float: left;
+}
+.sticky-right{
+  float: right;
+  padding-right: 20px;
+}
+.padding20{
+  padding: 20px;
+}
+.pageBox{
+  padding: 20px 0 0 0;
+}
+.padding-r20{
+  padding: 20px 20px 20px 0;
+}
+.width260{
+  width: 260px;
+}
+.cur{
+  cursor: pointer;
+}
+.table-fixed{
+  .el-table__fixed-right {
+  height: 100% !important; //设置高优先，以覆盖内联样式
+  }
+}
+.version{
+  font-size: 12px;
+  color: #909399;
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  z-index: 999999;
+}
+.content-html p{
+  padding: 0;
+  margin: 0;
+}
+.user-list{
+  background: #fff;
+  padding: 20px;
+}
